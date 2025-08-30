@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECTRIC XTRA</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+        <link href="electric-xtra.css" rel="stylesheet">
+<!--
+
+
+
+-->
+</head>
+<body>
+    <!-- Animated Grid Background -->
+    <div class="grid-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Animated Shapes -->
+    <div class="shapes-container">
+        <div class="shape shape-circle"></div>
+        <div class="shape shape-triangle"></div>
+        <div class="shape shape-square"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-link">
+                <svg class="logo-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF5E00;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#00B2FF;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <polygon points="20,2 38,14 38,26 20,38 2,26 2,14" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
+                    <polygon points="20,8 32,16 32,24 20,32 8,24 8,16" fill="url(#logoGradient)" opacity="0.3"/>
+                    <circle cx="20" cy="20" r="3" fill="url(#logoGradient)"/>
+                </svg>
+                <span class="logo-text" data-en="ELECTRIC XTRA" data-ar="إلكتريك إكسترا">ELECTRIC XTRA</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#features" class="nav-link" data-en="Features" data-ar="المميزات">Features</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-ar="حولنا">About</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                <li><button class="lang-toggle" onclick="toggleLanguage()">
+                    <i class="fas fa-language"></i> <span id="langText">العربية</span>
+                </button></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="text-rotator">
+                <div class="text-set active">
+                    <h1 class="glitch-text" data-text="FUTURE IS NOW" data-en="FUTURE IS NOW" data-ar="المستقبل الآن">FUTURE IS NOW</h1>
+                    <p class="subtitle" data-en="Enter the next dimension of digital innovation" data-ar="ادخل إلى البُعد التالي من الابتكار الرقمي">Enter the next dimension of digital innovation</p>
+                </div>
+                <div class="text-set">
+                    <h1 class="glitch-text" data-text="BEYOND LIMITS" data-en="BEYOND LIMITS" data-ar="ما وراء الحدود">BEYOND LIMITS</h1>
+                    <p class="subtitle" data-en="Where technology meets infinite possibilities" data-ar="حيث تلتقي التكنولوجيا بالإمكانيات اللامحدودة">Where technology meets infinite possibilities</p>
+                </div>
+                <div class="text-set">
+                    <h1 class="glitch-text" data-text="ELECTRIC DREAMS" data-en="ELECTRIC DREAMS" data-ar="أحلام كهربائية">ELECTRIC DREAMS</h1>
+                    <p class="subtitle" data-en="Powering tomorrow's digital revolution today" data-ar="نشغّل الثورة الرقمية لعالم الغد اليوم">Powering tomorrow's digital revolution today</p>
+                </div>
+            </div>
+        </div>
+        <div class="cta-container">
+            <a href="#features" class="cta-button cta-primary" data-en="Get Started" data-ar="ابدأ الآن">Get Started</a>
+            <a href="#about" class="cta-button cta-secondary" data-en="Learn More" data-ar="اعرف المزيد">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Features Section with Tabs -->
+    <section class="features" id="features">
+        <h2 class="section-title" data-en="Core Features" data-ar="المميزات الأساسية">Core Features</h2>
+        <div class="features-container">
+            <div class="feature-tabs">
+                <div class="tab-item active" data-tab="performance">
+                    <span class="tab-icon">⚡</span>
+                    <span data-en="Performance" data-ar="الأداء">Performance</span>
+                </div>
+                <div class="tab-item" data-tab="security">
+                    <span class="tab-icon">🔒</span>
+                    <span data-en="Security" data-ar="الأمان">Security</span>
+                </div>
+                <div class="tab-item" data-tab="network">
+                    <span class="tab-icon">🌐</span>
+                    <span data-en="Network" data-ar="الشبكة">Network</span>
+                </div>
+                <div class="tab-item" data-tab="analytics">
+                    <span class="tab-icon">📊</span>
+                    <span data-en="Analytics" data-ar="التحليلات">Analytics</span>
+                </div>
+                <div class="tab-item" data-tab="integration">
+                    <span class="tab-icon">🔧</span>
+                    <span data-en="Integration" data-ar="التكامل">Integration</span>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="content-panel active" id="performance">
+                    <h3 data-en="Lightning Fast Performance" data-ar="أداء سريع كالبرق">Lightning Fast Performance</h3>
+                    <p data-en="Experience unprecedented speed with our quantum-powered infrastructure. Built on cutting-edge technology that delivers results at the speed of thought. Electric Xtra CSS template is brought to you by TemplateMo website." data-ar="اختبر سرعة لم يسبق لها مثيل مع بنيتنا التحتية المدعومة بالكم. مبنية على تكنولوجيا متطورة تقدم النتائج بسرعة الفكر. قالب Electric Xtra CSS مقدم لك من موقع TemplateMo.">Experience unprecedented speed with our quantum-powered infrastructure. Built on cutting-edge technology that delivers results at the speed of thought. Electric Xtra CSS template is brought to you by TemplateMo website.</p>
+                    <ul class="feature-list">
+                        <li data-en="Sub-millisecond response times" data-ar="أوقات استجابة أقل من الميلي ثانية">Sub-millisecond response times</li>
+                        <li data-en="99.99% uptime guarantee" data-ar="ضمان وقت تشغيل 99.99%">99.99% uptime guarantee</li>
+                        <li data-en="Automatic scaling based on demand" data-ar="تحجيم تلقائي حسب الطلب">Automatic scaling based on demand</li>
+                        <li data-en="Real-time data synchronization" data-ar="مزامنة البيانات في الوقت الفعلي">Real-time data synchronization</li>
+                    </ul>
+                </div>
+                <div class="content-panel" id="security">
+                    <h3 data-en="Military-Grade Security" data-ar="أمان بمستوى عسكري">Military-Grade Security</h3>
+                    <p data-en="Your data is protected by the most advanced encryption protocols available. Multi-layered security ensures complete protection against cyber threats. You may tell your friends about TemplateMo free css website and how easy it is." data-ar="بياناتك محمية بأحدث بروتوكولات التشفير المتاحة. الأمان متعدد الطبقات يضمن الحماية الكاملة ضد التهديدات السيبرانية. يمكنك إخبار أصدقائك عن موقع TemplateMo المجاني وكم هو سهل.">Your data is protected by the most advanced encryption protocols available. Multi-layered security ensures complete protection against cyber threats. You may tell your friends about TemplateMo free css website and how easy it is.</p>
+                    <ul class="feature-list">
+                        <li data-en="256-bit AES encryption" data-ar="تشفير AES 256 بت">256-bit AES encryption</li>
+                        <li data-en="Biometric authentication" data-ar="المصادقة البيومترية">Biometric authentication</li>
+                        <li data-en="Zero-knowledge architecture" data-ar="معمارية عدم المعرفة">Zero-knowledge architecture</li>
+                        <li data-en="Real-time threat detection" data-ar="كشف التهديدات في الوقت الفعلي">Real-time threat detection</li>
+                        <li data-en="Automated security updates" data-ar="تحديثات أمنية تلقائية">Automated security updates</li>
+                    </ul>
+                </div>
+                <div class="content-panel" id="network">
+                    <h3 data-en="Global Neural Network" data-ar="شبكة عصبية عالمية">Global Neural Network</h3>
+                    <p data-en="Connect to our worldwide infrastructure that spans across continents. Seamless integration with existing systems and future-proof architecture." data-ar="اتصل ببنيتنا التحتية العالمية التي تمتد عبر القارات. تكامل سلس مع الأنظمة الحالية ومعمارية مقاومة للمستقبل.">Connect to our worldwide infrastructure that spans across continents. Seamless integration with existing systems and future-proof architecture.</p>
+                    <ul class="feature-list">
+                        <li data-en="200+ global data centers" data-ar="أكثر من 200 مركز بيانات عالمي">200+ global data centers</li>
+                        <li data-en="Intelligent routing algorithms" data-ar="خوارزميات توجيه ذكية">Intelligent routing algorithms</li>
+                        <li data-en="Cross-platform compatibility" data-ar="التوافق عبر المنصات">Cross-platform compatibility</li>
+                        <li data-en="5G and satellite connectivity" data-ar="اتصال 5G والأقمار الصناعية">5G and satellite connectivity</li>
+                        <li data-en="Decentralized architecture" data-ar="معمارية لامركزية">Decentralized architecture</li>
+                    </ul>
+                </div>
+                <div class="content-panel" id="analytics">
+                    <h3 data-en="Advanced Analytics" data-ar="تحليلات متقدمة">Advanced Analytics</h3>
+                    <p data-en="Harness the power of AI-driven insights to make data-driven decisions. Real-time analytics and predictive modeling at your fingertips." data-ar="استغل قوة الرؤى المدفوعة بالذكاء الاصطناعي لاتخاذ قرارات مبنية على البيانات. تحليلات في الوقت الفعلي ونمذجة تنبؤية في متناول يدك.">Harness the power of AI-driven insights to make data-driven decisions. Real-time analytics and predictive modeling at your fingertips.</p>
+                    <ul class="feature-list">
+                        <li data-en="Machine learning algorithms" data-ar="خوارزميات التعلم الآلي">Machine learning algorithms</li>
+                        <li data-en="Predictive analytics" data-ar="التحليلات التنبؤية">Predictive analytics</li>
+                        <li data-en="Custom dashboard creation" data-ar="إنشاء لوحات تحكم مخصصة">Custom dashboard creation</li>
+                        <li data-en="Real-time data visualization" data-ar="تصور البيانات في الوقت الفعلي">Real-time data visualization</li>
+                        <li data-en="Automated reporting" data-ar="التقارير التلقائية">Automated reporting</li>
+                    </ul>
+                </div>
+                <div class="content-panel" id="integration">
+                    <h3 data-en="Seamless Integration" data-ar="تكامل سلس">Seamless Integration</h3>
+                    <p data-en="Connect with thousands of apps and services through our universal API. Built to work with your existing tools and workflows." data-ar="اتصل بآلاف التطبيقات والخدمات من خلال واجهة برمجة التطبيقات الشاملة. مصمم للعمل مع أدواتك وسير العمل الحالي.">Connect with thousands of apps and services through our universal API. Built to work with your existing tools and workflows.</p>
+                    <ul class="feature-list">
+                        <li data-en="RESTful API architecture" data-ar="معمارية API RESTful">RESTful API architecture</li>
+                        <li data-en="WebSocket support" data-ar="دعم WebSocket">WebSocket support</li>
+                        <li data-en="SDK for major platforms" data-ar="SDK للمنصات الرئيسية">SDK for major platforms</li>
+                        <li data-en="One-click integrations" data-ar="تكاملات بنقرة واحدة">One-click integrations</li>
+                        <li data-en="Custom webhook support" data-ar="دعم webhook مخصص">Custom webhook support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title" data-en="About Electric Xtra" data-ar="حول إلكتريك إكسترا">About Electric Xtra</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h2 data-en="Pioneering the Digital Frontier" data-ar="رواد الحدود الرقمية">Pioneering the Digital Frontier</h2>
+                <p data-en="At ELECTRIC XTRA, we're not just building technology – we're crafting the future. Our mission is to bridge the gap between human potential and digital innovation, creating solutions that empower individuals and transform industries." data-ar="في إلكتريك إكسترا، نحن لا نبني التكنولوجيا فحسب - بل نصنع المستقبل. مهمتنا هي سد الفجوة بين الإمكانات البشرية والابتكار الرقمي، وخلق حلول تمكن الأفراد وتحول الصناعات.">At ELECTRIC XTRA, we're not just building technology – we're crafting the future. Our mission is to bridge the gap between human potential and digital innovation, creating solutions that empower individuals and transform industries.</p>
+                <p data-en="Founded by visionaries who saw beyond the limitations of current technology, ELECTRIC XTRA represents a quantum leap in digital infrastructure. We combine cutting-edge research with practical applications to deliver solutions that are both revolutionary and reliable." data-ar="تأسست من قبل أصحاب الرؤية الذين رأوا ما وراء حدود التكنولوجيا الحالية، تمثل إلكتريك إكسترا قفزة كمية في البنية التحتية الرقمية. نجمع بين البحوث المتطورة والتطبيقات العملية لتقديم حلول ثورية وموثوقة على حد سواء.">Founded by visionaries who saw beyond the limitations of current technology, ELECTRIC XTRA represents a quantum leap in digital infrastructure. We combine cutting-edge research with practical applications to deliver solutions that are both revolutionary and reliable.</p>
+                <p data-en="Join us as we redefine what's possible in the digital age. The future isn't something that happens to us – it's something we create together." data-ar="انضم إلينا ونحن نعيد تعريف ما هو ممكن في العصر الرقمي. المستقبل ليس شيئًا يحدث لنا - بل شيء نصنعه معًا.">Join us as we redefine what's possible in the digital age. The future isn't something that happens to us – it's something we create together.</p>
+            </div>
+            <div class="about-visual">
+                <div class="about-graphic"></div>
+            </div>
+        </div>
+        
+        <!-- Second row with reversed layout -->
+        <div class="about-content" style="margin-top: 50px;">
+            <div class="about-visual">
+                <div class="about-graphic-alt">
+                    <div class="hexagon"></div>
+                    <div class="hexagon"></div>
+                    <div class="hexagon"></div>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2 data-en="Innovation at Every Level" data-ar="الابتكار على كل مستوى">Innovation at Every Level</h2>
+                <p data-en="Our commitment to excellence drives us to push boundaries and challenge conventions. With a team of world-class engineers, designers, and visionaries, we're creating solutions that not only meet today's needs but anticipate tomorrow's challenges." data-ar="التزامنا بالتميز يدفعنا لتجاوز الحدود وتحدي الأعراف. مع فريق من المهندسين والمصممين وأصحاب الرؤى من الطراز العالمي، نحن نبتكر حلولاً لا تلبي احتياجات اليوم فحسب، بل تتوقع تحديات الغد.">Our commitment to excellence drives us to push boundaries and challenge conventions. With a team of world-class engineers, designers, and visionaries, we're creating solutions that not only meet today's needs but anticipate tomorrow's challenges.</p>
+                <p data-en="From quantum computing to neural networks, from blockchain to AI, we're at the forefront of every technological revolution. Our integrated approach ensures that each innovation builds upon the last, creating a synergy that amplifies our impact." data-ar="من الحوسبة الكمية إلى الشبكات العصبية، ومن البلوك تشين إلى الذكاء الاصطناعي، نحن في المقدمة من كل ثورة تكنولوجية. نهجنا المتكامل يضمن أن كل ابتكار يبني على السابق، مما يخلق تناغمًا يضاعف تأثيرنا.">From quantum computing to neural networks, from blockchain to AI, we're at the forefront of every technological revolution. Our integrated approach ensures that each innovation builds upon the last, creating a synergy that amplifies our impact.</p>
+                <p data-en="Experience the power of true digital transformation. With ELECTRIC XTRA, you're not just adopting technology – you're embracing a philosophy of continuous evolution and limitless possibility." data-ar="اختبر قوة التحول الرقمي الحقيقي. مع إلكتريك إكسترا، أنت لا تتبنى التكنولوجيا فحسب - بل تحتضن فلسفة التطور المستمر والإمكانيات اللامحدودة.">Experience the power of true digital transformation. With ELECTRIC XTRA, you're not just adopting technology – you're embracing a philosophy of continuous evolution and limitless possibility.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name" data-en="Name" data-ar="الاسم">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" data-en="Subject" data-ar="الموضوع">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-en="Message" data-ar="الرسالة">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3 data-en="Connect With Us" data-ar="تواصل معنا">Connect With Us</h3>
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-details">
+                        <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
+                        <p>mohamedashraf22262@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📱</div>
+                    <div class="info-details">
+                        <h4 data-en="Phone" data-ar="الهاتف">Phone</h4>
+                        <p>+201272164412</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-details">
+                        <h4 data-en="Location" data-ar="الموقع">Location</h4>
+                        <p data-en="Egypt , Alexandria" data-ar="مصر  الاسكندريه">Egypt , Alexandria</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <p data-en="Interactive Map" data-ar="خريطة تفاعلية">Interactive Map</p>
+                        <p style="font-size: 0.9rem; margin-top: 10px;" data-en="Neo Tokyo, Sector 7" data-ar="مصر  الاسكندريه">Egypt , Alexandria</p>
+                    </div>
+                    <div class="map-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy" data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</a>
+                <a href="#terms" data-en="Terms of Service" data-ar="شروط الخدمة">Terms of Service</a>
+                <a href="#careers" data-en="Careers" data-ar="الوظائف">Careers</a>
+            </div>
+            <p class="copyright">
+                <span data-en="© 2025 ELECTRIC XTRA. All rights reserved. Building tomorrow, today." data-ar="© 2025 إلكتريك إكسترا. جميع الحقوق محفوظة محمد اشرف.">© 2025 Mohamed Ashraf. All rights reserved. </span>
+                | 
+                <span data-en="Design:" data-ar="التصميم:">Design:</span> 
+                <a href="https://github.com/MohamedAshraf-a" target="_blank" rel="nofollow noopener">Github</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="electric-scripts.js"></script>
+
+
+    
+
+</html>
